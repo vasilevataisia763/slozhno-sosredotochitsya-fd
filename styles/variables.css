@@ -6,6 +6,7 @@
   --bg-image: url('../images/cover-image-dark.png');
   --bg-color: rgba(0, 0, 40, 1);
   --accent-color: rgba(255, 0, 112, 1);
-  --h1-text: rgba(219, 0, 255, 1);
+  --heading-text: rgba(219, 0, 255, 1);
   --title-decor-text-color: rgba(0, 0, 40, 1);
+  --primary-text-color: rgba(241, 178, 206, 1);
 }
