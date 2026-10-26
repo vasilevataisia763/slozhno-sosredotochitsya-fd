@@ -2,4 +2,123 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat; 
+background-color: var(--bg-color);
 }
+
+.header{
+  block-size: 100vh;
+  min-block-size: 668px;
+  border: 2px solid var(--accent-color);
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr auto 1fr;
+  padding: 10px;
+  position: relative;
+}
+
+.header__rec{
+position: absolute;
+top: 10px;
+right: 20px;
+font-family: IBM Plex Mono;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--accent-color);
+display: flex;
+align-items: center;
+}
+
+.header__rec::after {
+  content: ''; 
+  background-color: var(--accent-color);
+  margin-left: 10px;
+  width: 9px;
+  height: 9px;
+  display: inline-block; 
+  box-shadow: 0 0 4px var(--accent-color);
+  border-radius: 50%; 
+} 
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+} 
+
+.header__theme-menu{
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+.heading{
+  grid-row: 2;
+  justify-self: start;
+  align-self: center;
+  font-family: IBM Plex Mono;
+font-weight: 700;
+font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+line-height: 83%;
+letter-spacing: 0%;
+color: var(--h1-text);
+text-shadow: 4px 4px 0 var(--accent-color); 
+}
+
+.header-titel{
+  grid-row: 3;
+  justify-self: start;
+  align-self: center;
+}
+
+.title{
+font-family: IBM Plex Mono;
+font-weight: 700;
+font-size: 18px;
+line-height: 23.4px;
+letter-spacing: 0%;
+}
+
+.title-decor{
+  background-color: var(--accent-color);
+  color: var(--title-decor-text-color);
+}
+
+
+
+.main{
+  background-color: var(--bg-color);
+  padding: 40px 10px 0px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto auto auto auto; /* подумай правильное ли решение */
+
+}
+
