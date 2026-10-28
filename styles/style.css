@@ -92,7 +92,6 @@
 
 .header__theme-menu-button {
   border: 1px solid transparent;
-  padding: 0;
   padding: 1px 13px 5px;
   color: var(--title-accent-color);
   font-family:
@@ -302,7 +301,7 @@
   }
 
   .page-section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr;
     align-items: start;
     gap: 20px;
   }
@@ -374,6 +373,12 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .page-section {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 20px;
   }
 
   /*Добавила для логичной структуры грида (если бы .section-content попал уже в четную секцию)*/
