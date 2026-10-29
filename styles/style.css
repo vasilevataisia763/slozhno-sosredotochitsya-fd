@@ -24,11 +24,11 @@
   position: absolute;
   top: 10px;
   right: 20px;
-  display: flex;
+  display: var(--rec-display);
   align-items: center;
   color: var(--title-accent-color);
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -48,8 +48,7 @@
   background-color: var(--title-accent-color);
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before{
   content: "";
   position: absolute;
   top: 10px;
@@ -61,8 +60,7 @@
   border-right: 1px solid var(--title-accent-color);
 }
 
-.header::after,
-.footer::after {
+.decorated-zone::after{
   content: "";
   position: absolute;
   bottom: 10px;
@@ -95,7 +93,7 @@
   padding: 1px 13px 5px;
   color: var(--title-accent-color);
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -128,7 +126,7 @@
   align-self: center;
   color: var(--heading-text);
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -145,7 +143,7 @@
 
 .title {
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -163,7 +161,6 @@
   grid-template-columns: 1fr;
   row-gap: 50px;
   padding: 40px 10px 40px;
-  background-color: var(--bg-color);
 }
 
 .title-section {
@@ -189,7 +186,7 @@
   padding-top: 10px;
   color: var(--primary-text-color);
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -236,7 +233,6 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 10px;
-  background-color: var(--bg-color);
   block-size: 100vh;
   min-block-size: 668px;
 }
@@ -246,7 +242,7 @@
   align-self: center;
   color: var(--heading-text);
   font-family:
-    IBM Plex Mono,
+    "IBM Plex Mono",
     sans-serif;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -266,14 +262,12 @@
     right: 30px;
   }
 
-  .header::before,
-  .footer::before {
+  .decorated-zone::before {
     top: 20px;
     right: 20px;
   }
 
-  .header::after,
-  .footer::after {
+  .decorated-zone::after {
     bottom: 20px;
     left: 20px;
   }
@@ -306,20 +300,20 @@
     gap: 20px;
   }
 
-  .page-section:nth-of-type(odd) .article-info {
+  .page-section .article-info {
     grid-column: 2/-1;
   }
 
-  .page-section:nth-of-type(odd) .section-content {
+  .page-section .section-content {
     grid-column: 2/-1;
   }
 
   /*Добавила для логичной структуры грида (если бы .section-content попал уже в четную секцию)*/
-  .page-section:nth-of-type(even) .section-content {
+  .full-width-content .section-content {
     grid-column: 1/-1;
   }
 
-  .page-section:nth-of-type(even) .article-info {
+  .full-width-content .article-info {
     grid-column: 1/-1;
   }
 
@@ -382,12 +376,12 @@
   }
 
   /*Добавила для логичной структуры грида (если бы .section-content попал уже в четную секцию)*/
-  .page-section:nth-of-type(even) .section-content {
+  .full-width-content .section-content {
     grid-column: span 1;
     grid-row: 2;
   }
 
-  .page-section:nth-of-type(even) .article-info {
+  .full-width-content .article-info {
     grid-column: span 1;
     grid-row: 2;
   }

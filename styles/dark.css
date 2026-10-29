@@ -12,4 +12,8 @@
   --title-decor-text-color: rgba(0, 0, 40, 1);
   --title-accent-color: rgba(255, 0, 112, 1);
   --primary-text-color: rgba(241, 178, 206, 1);
+  --rec-display: flex;
 }
+
+
+

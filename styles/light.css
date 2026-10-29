@@ -17,10 +17,11 @@
   --title-decor-text-color: rgba(53, 52, 48, 1);
   --primary-text-color: rgba(53, 52, 48, 1);
   --title-accent-color: rgba(53, 52, 48, 1);
+  --rec-display: none;
 }
 
 .theme-light .header__rec {
-  display: none;
+  display: var(--rec-display);
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,9 +33,10 @@
     --title-decor-text-color: rgba(53, 52, 48, 1);
     --primary-text-color: rgba(53, 52, 48, 1);
     --title-accent-color: rgba(53, 52, 48, 1);
+    --rec-display: none;
   }
 
   .header__rec {
-    display: none;
+    display: var(--rec-display);
   }
 }
